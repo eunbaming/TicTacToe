@@ -1,8 +1,12 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./Square.css";
 
-export default class Square extends Component {
-  render() {
-    return <button className="square"></button>;
-  }
-}
+const Square = ({ onClick, value }) => {
+  return (
+    <button className="square" onClick={onClick}>
+      {value}
+    </button>
+  );
+};
+
+export default Square;
